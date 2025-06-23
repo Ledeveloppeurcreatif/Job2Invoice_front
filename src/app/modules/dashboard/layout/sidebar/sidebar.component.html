@@ -1,0 +1,124 @@
+<!-- [ Sidebar Menu ] start -->
+<nav class="pc-sidebar" [class.collapsed]="isCollapsed">
+  <div class="navbar-wrapper">
+    <div class="m-header">
+      <a class="b-brand text-primary logo-container" routerLink="/dashboard">
+        <img
+          alt="InvoicePlanner Logo"
+          class="logo-lg"
+          src="assets/images/logo/invoice-planner-logo.svg"
+          height="50"
+        />
+        <!-- <div class="app-title">
+          <span>Invoice Planner</span>
+          <small>Gestion de factures</small>
+        </div> -->
+      </a>
+    </div>
+    <div class="navbar-content">
+      <ul class="pc-navbar">
+        <li class="pc-item">
+          <a class="pc-link" routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <span class="pc-micon">
+              <box-icon name='dashboard' type='solid' color='#ffffff' ></box-icon>
+            </span>
+            <span class="pc-mtext">Tableau de bord</span>
+          </a>
+        </li>
+
+        <li class="pc-item">
+          <a class="pc-link" routerLink="/dashboard/clients" routerLinkActive="active">
+            <span class="pc-micon">
+              <i class='bx bx-user'></i>
+            </span>
+            <span class="pc-mtext">Clients</span>
+          </a>
+        </li>
+
+        <li class="pc-item">
+          <a class="pc-link" routerLink="/dashboard/devis" routerLinkActive="active">
+            <span class="pc-micon">
+              <i class="ph-duotone ph-file-text"></i>
+            </span>
+            <span class="pc-mtext">Devis</span>
+          </a>
+        </li>
+
+        <li class="pc-item">
+          <a class="pc-link" routerLink="/dashboard/factures" routerLinkActive="active">
+            <span class="pc-micon">
+              <i class="ph-duotone ph-receipt"></i>
+            </span>
+            <span class="pc-mtext">Factures</span>
+          </a>
+        </li>
+
+        <li class="pc-item">
+          <a class="pc-link" routerLink="/dashboard/services" routerLinkActive="active">
+            <span class="pc-micon">
+              <i class='bx bx-shopping-bag'></i>
+            </span>
+            <span class="pc-mtext">Services</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="card pc-user-card" style="background-color: #5D87FF;" >
+      <div class="card-body">
+        <div class="d-flex align-items-center">
+          <div class="flex-shrink-0">
+            <img
+              [src]="userAvatarUrl || 'assets/images/user/avatar-1.jpg'"
+              alt="user-image"
+              class="user-avtar wid-45 rounded-circle"
+            />
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <div class="dropdown">
+              <a
+                class="arrow-none dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                aria-expanded="false"
+              >
+                <div class="d-flex align-items-center">
+                  <div class="flex-grow-1 me-2">
+                    <h6 class="mb-0">{{ userName }}</h6>
+                    <small>{{ userRole }}</small>
+                  </div>
+                  <i
+                    class="ph-duotone ph-windows-logo"
+                    style="font-size: 1.5rem"
+                  ></i>
+                </div>
+              </a>
+              <div class="dropdown-menu" >
+                <ul>
+                  <li>
+                    <a class="pc-user-links" routerLink="/profile">
+                      <i class="ph-duotone ph-user"></i>
+                      <span>Mon Profil</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="pc-user-links" routerLink="/dashboard/profile">
+                      <i class="ph-duotone ph-gear"></i>
+                      <span>Paramètres</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="pc-user-links" (click)="logout()">
+                      <i class="ph-duotone ph-power"></i>
+                      <span>Déconnexion</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- [ Sidebar Menu ] end -->
