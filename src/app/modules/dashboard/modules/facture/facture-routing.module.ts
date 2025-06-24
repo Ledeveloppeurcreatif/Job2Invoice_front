@@ -8,7 +8,8 @@ import { AddFactureComponent } from './components/add-facture/add-facture.compon
 const routes: Routes = [
   { path: '', component: ListFactureComponent },
   { path: 'edit-facture/:id', component: EditFactureComponent },
-  { path: 'add-facture', component: AddFactureComponent }
+  { path: 'add-facture', component: AddFactureComponent },
+  { path: 'details/:id', component: EditFactureComponent }
 ];
 
 @NgModule({

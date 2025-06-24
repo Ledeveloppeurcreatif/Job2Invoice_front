@@ -201,8 +201,8 @@
             <div class="col-md-6 col-xl-8">
                 <div class="card table-card">
                     <div class="card-header d-flex align-items-center justify-content-between py-3">
-                        <h5>Factures récentes</h5>
-                        <a routerLink="/dashboard/facture" class="btn btn-sm btn-primary">
+                        <h5>Factures recentes</h5>
+                        <a routerLink="/dashboard/factures" class="btn btn-sm btn-primary">
                             <i class="ti ti-receipt me-1"></i> Toutes les factures
                         </a>
                     </div>
@@ -246,7 +246,7 @@
                                             </span>
                                         </td> -->
                                         <td class="text-end">
-                                            <a [routerLink]="['/dashboard/facture', facture.trackingId]"
+                                            <a [routerLink]="['/dashboard/factures/details', facture.trackingId]"
                                                 class="btn btn-sm btn-outline-primary">
                                                 <i class="ti ti-eye me-1"></i> Voir
                                             </a>
